@@ -68,18 +68,14 @@ function colorModeToggle() {
       htmlElement.classList.add("dark-mode");
       setColors(darkColors, animate);
 
-      var grad = document.getElementByClass("div-gradient");
-      grad.style.display = "block";
+      document.getElementsByClassName("div-gradient")[0].style.display="block";
 
       togglePressed = "true";
     } else {
       localStorage.setItem("dark-mode", "false");
       htmlElement.classList.remove("dark-mode");
       setColors(lightColors, animate);
-
-      var grad = document.getElementByClass("div-gradient");
-      grad.style.display = "none";
-
+      document.getElementsByClassName("div-gradient")[0].style.display="none");
       togglePressed = "false";    
     }
     
