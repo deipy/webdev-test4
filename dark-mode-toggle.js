@@ -68,7 +68,7 @@ function colorModeToggle() {
       htmlElement.classList.add("dark-mode");
       setColors(darkColors, animate);
 
-      var grad = getElementByClass("div-gradient");
+      var grad = document.getElementByClass("div-gradient");
       grad.style.display = "block";
 
       togglePressed = "true";
@@ -77,7 +77,7 @@ function colorModeToggle() {
       htmlElement.classList.remove("dark-mode");
       setColors(lightColors, animate);
 
-      var grad = getElementByClass("div-gradient");
+      var grad = document.getElementByClass("div-gradient");
       grad.style.display = "none";
 
       togglePressed = "false";    
