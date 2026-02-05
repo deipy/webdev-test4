@@ -1,5 +1,5 @@
 function colorModeToggle() {
-    console.log("This is a test");
+    console.log("This is a test 2 ");
     function attr(defaultVal, attrVal) {
     const defaultValType = typeof defaultVal;
     if (typeof attrVal !== "string" || attrVal.trim() === "") return defaultVal;
@@ -67,11 +67,18 @@ function colorModeToggle() {
       localStorage.setItem("dark-mode", "true");
       htmlElement.classList.add("dark-mode");
       setColors(darkColors, animate);
+        
+      var grad = getElementByClass("div-gradient");
+      grad.style.display = "Block";
+        
       togglePressed = "true";
     } else {
       localStorage.setItem("dark-mode", "false");
       htmlElement.classList.remove("dark-mode");
       setColors(lightColors, animate);
+      var grad = getElementByClass("div-gradient");
+      grad.style.displat = "None";
+        
       togglePressed = "false";    
     }
     
@@ -119,4 +126,5 @@ function colorModeToggle() {
 }
 
 colorModeToggle();
+
 
